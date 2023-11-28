@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a
+{
+    color: #F2ECBE;
+}
+
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body
+{
+    background: #480404;
+    color: #F2ECBE;
+}
+
+
+.bubbles
+{
+    position: relative;
+    display: flex;
+}
+.bubbles span
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #FFC436;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #FFCA03,
+    0 0 50px #FFC436,
+    0 0 100px #FFC436;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(150s / var(--i));
+}  
+.bubbles span:nth-child(even)
+{
+    background: #F90716;
+    box-shadow: 0 0 0 10px #FF5403,
+    0 0 50px #F90716,
+    0 0 100px #F90716;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0) ;
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1) ;
+    }
+}
+.container
+{
+    margin: 10px 20px 30px 40px;
+}
+
+
+.header
+{
+    background: #240000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo
+{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #9a0000;
+}
+
+.menu-bar a
+{
+    font-size: 1.6rem;
+    margin-left: 3.5rem;
+    transition: 0.5s ease;
+}
+.menu-bar a:hover
+{
+    color: #8a0000;
+}
+
+#menu-btn
+{
+    font-size: 3rem;
+    display: none;
+}
+
+section
+{
+    padding: 10rem 10%;
+    min-height: 100vh;
+}
+
+
+/*Home Section*/
+.HOME
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HOME-BIO h3
+{
+    font-size: 2.9rem;
+}
+
+span
+{
+    color: #FF0000;
+}
+
+.HOME-BIO h1
+{
+    font-size: 3.9rem;
+    line-height: 1.4;
+}
+
+.HOME-BIO p
+{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.profile-picture img
+{
+    width: 30vw;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+    50%
+    {
+        transform: translateY(-2.5rem);
+    } 
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+
+.social-media a
+{
+    width: 3.9rem;
+    height: 3.8rem;
+    font-size: 3rem;
+    margin: 1rem 1rem 2rem 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+.social-media a:hover
+{
+    color: #F2ECBE;
+    box-shadow: 0 0 1rem #F2ECBE;
+}
+
+.btn
+{
+    display: inline-block;
+    background: #F2ECBE;
+    margin: 2rem 0;
+    padding: 1rem 2.5rem;
+    border-radius: 1.5rem;
+    color: #240000;
+    font-weight: 700;
+    transition: 0.5s ease;
+}
+.btn:hover
+{
+    color: #F2ECBE;
+    background: #240000;
+    box-shadow: 0 0 1rem #F2ECBE;
+}
+
+
+/*About Section*/
+.ABOUT
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading
+{
+    font-size: 3.3rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.ABOUT-items
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.ABOUT-resume
+{
+    font-size: 2rem;
+}
+
+.ABOUT-text p
+{
+    font-size: 1.9rem;
+}
+
+
+/*Skills Section*/
+.SKILLS
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.SKILLS-item
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.SKILLS-card
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.SKILLS-card:hover
+{
+    border-radius: 1rem solid;
+    transform: scale(1.05);
+}
+
+.SKILLS-card .bx
+{
+    font-size: 8rem;
+    transition: 0.4s ease;
+}
+
+.SKILLS-card .bx:hover
+{
+    color: #FF5733;
+}
+.SKILLS-card h3
+{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.SKILLS-card p
+{
+    text-align: center;
+    font-size: 1.3rem;
+    opacity: 0.5;
+}
+
+
+/*Skills Section*/
+.CONTACT
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form
+{
+    display: grid;
+    row-gap: 1rem;
+}
+
+form input,textarea
+{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #F2ECBE;
+    background: #240000;
+    border-radius: 1rem;
+    resize: none;
+}
+
+
+/*Footer Section*/
+.footer
+{
+    padding: 2rem 10%;
+    text-align: center;
+    font-size: 1rem;
+}
+hr
+{
+    margin: 1rem;
+    border-bottom: thin solid #F2ECBE;
+}
+
+/*Responsive Section*/
+@media (max-width: 1200px)
+{
+    html
+    {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 992px)
+{
+    .header
+    {
+        padding: 2rem 4%;
+    }
+    .home img
+    {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 767px)
+{
+    #menu-btn
+    {
+        display: block;
+    }
+    .menu-bar
+    {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: #240000;
+        display: none;
+    }
+    .menu-bar.active
+    {
+        display: block;
+    }
+    .menu-bar a
+    {
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+    .HOME, .ABOUT-items
+    {
+        flex-direction: column;
+    }
+    .HOME img
+    {
+        width: 80vw;
+    }
+    .heading
+    {
+        font-size: 3rem;
+    }
+    .SKILLS-item
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 620px)
+{
+    .SKILLS-item
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .heading
+    {
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 450px)
+{
+    html
+    {
+        font-size: 50%;
+    }
+}
